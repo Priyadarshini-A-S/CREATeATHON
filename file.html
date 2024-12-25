@@ -17,6 +17,7 @@
                 <li><a href="#" onclick="showTopic('functions')">Functions</a></li>
                 <li><a href="#" onclick="showTopic('loops')">Loops</a></li>
                 <li><a href="#" onclick="showTopic('arrays')">Arrays</a></li>
+                <li><a href="#" onclick="showTopic('quiz')">Quiz</a></li>
             </ul>
         </nav>
     </header>
@@ -51,6 +52,40 @@
             <p>Arrays content</p>
         </div>
     </div>
+    <!-- Quiz Section -->
+        <div id="quiz" class="topic">
+            <h2>C Programming Quiz</h2>
+            <form id="quiz-form">
+                <div>
+                    <p>1. What is the correct syntax to print "Hello, World!" in C?</p>
+                    <input type="radio" id="q1a" name="q1" value="a">
+                    <label for="q1a">printf("Hello, World!");</label><br>
+                    <input type="radio" id="q1b" name="q1" value="b">
+                    <label for="q1b">print("Hello, World!");</label><br>
+                    <input type="radio" id="q1c" name="q1" value="c">
+                    <label for="q1c">echo("Hello, World!");</label><br>
+                </div>
+                <div>
+                    <p>2. Which of the following is a correct way to declare a variable in C?</p>
+                    <input type="radio" id="q2a" name="q2" value="a">
+                    <label for="q2a">int x = 10;</label><br>
+                    <input type="radio" id="q2b" name="q2" value="b">
+                    <label for="q2b">x = 10 int;</label><br>
+                    <input type="radio" id="q2c" name="q2" value="c">
+                    <label for="q2c">10 = int x;</label><br>
+                </div>
+                <div>
+                    <p>3. What is the purpose of the 'return' keyword in C?</p>
+                    <input type="radio" id="q3a" name="q3" value="a">
+                    <label for="q3a">To exit the program.</label><br>
+                    <input type="radio" id="q3b" name="q3" value="b">
+                    <label for="q3b">To return a value from a function.</label><br>
+                    <input type="radio" id="q3c" name="q3" value="c">
+                    <label for="q3c">To call another function.</label><br>
+                </div>
+                <button type="button" onclick="checkAnswers()">Submit Answers</button>
+            </form>
+            <div id="quiz-result"></div>
 
     <footer>
         <p>&copy;team echo. All rights reserved.</p>
