@@ -25,19 +25,17 @@ function showTopic(topic) {
         }
     });
 }
-
 function checkAnswers() {
     // Correct answers
     const correctAnswers = {
         q1: "a",  // printf("Hello, World!");
         q2: "a",  // int x = 10;
-        q3: "b",  // To return a value from a function.
+        q3: "b",  // To return a value from a function
         q4: "c",  // for
         q5: "c",  // /* ... */
         q6: "a"   // While
     };
-
-    // Get the selected answers
+ // Get the selected answers
     let score = 0;
     for (let i = 1; i <= 6; i++) {
         const selectedOption = document.querySelector(`input[name="q${i}"]:checked`);
@@ -45,8 +43,7 @@ function checkAnswers() {
             score++;
         }
     }
-
-    // Display the result
+ // Display the result
     const result = document.getElementById("quiz-result");
     result.innerHTML = `You scored ${score} out of 6.`;
 }
