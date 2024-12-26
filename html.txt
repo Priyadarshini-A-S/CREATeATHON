@@ -1,2 +1,0 @@
-this is my first commit message in html file
-this is a commit message
