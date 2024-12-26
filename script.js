@@ -27,26 +27,27 @@ function showTopic(topic) {
 }
 
 function checkAnswers() {
-    const answers = {
-        q1: 'a',
-        q2: 'a',
-        q3: 'b'
+    // Correct answers
+    const correctAnswers = {
+        q1: "a",  // printf("Hello, World!");
+        q2: "a",  // int x = 10;
+        q3: "b",  // To return a value from a function.
+        q4: "c",  // for
+        q5: "c",  // /* ... */
+        q6: "a"   // While
     };
 
+    // Get the selected answers
     let score = 0;
-    const form = document.getElementById('quiz-form');
-
-    // Check answers
-    for (let i = 1; i <= 3; i++) {
-        const answer = form.querySelector(`input[name="q${i}"]:checked`);
-        if (answer && answer.value === answers[`q${i}`]) {
+    for (let i = 1; i <= 6; i++) {
+        const selectedOption = document.querySelector(`input[name="q${i}"]:checked`);
+        if (selectedOption && selectedOption.value === correctAnswers[`q${i}`]) {
             score++;
         }
     }
 
     // Display the result
-    const resultElement = document.getElementById('quiz-result');
-    resultElement.innerHTML = `You scored ${score} out of 3.`;
-    resultElement.style.color = score === 3 ? 'green' : (score > 0 ? 'orange' : 'red');
+    const result = document.getElementById("quiz-result");
+    result.innerHTML = `You scored ${score} out of 6.`;
 }
 
