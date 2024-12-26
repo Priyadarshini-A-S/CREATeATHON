@@ -46,14 +46,209 @@ nav ul li a:hover {
     color: #f1efef;
 }
 
-footer {
-    background-color: #333;
-    color: white;
+/* Style the quiz container */
+#quiz {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Style the quiz title */
+#quiz h2 {
     text-align: center;
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
+    color: #333;
+}
+
+/* Style the form elements */
+form {
+    margin-top: 20px;
+}
+
+form div {
+    margin-bottom: 15px;
+}
+
+form p {
+    font-size: 16px;
+    color: #444;
+}
+
+input[type="radio"] {
+    margin-right: 10px;
+}
+
+/* Style the submit button */
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    display: block;
     width: 100%;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Style the result section */
+#quiz-result {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    color: #333;
+}
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Main Content Styling */
+#content {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Topic Section Styling */
+.topic {
+    margin-bottom: 40px;
+}
+
+h2 {
+    color: #007bff;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* Styling for Headers in sections */
+header h1, h2 {
+    margin-bottom: 15px;
+    color: #0056b3;
+}
+
+header ul {
+    list-style: none;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+header li {
+    margin-bottom: 5px;
+}
+
+/* Code Block Styling */
+pre, code {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 5px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+    color: #333;
+    display: block;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    margin-bottom: 20px;
+}
+
+code {
+    display: inline;
+    background-color: transparent;
+    padding: 0 5px;
+}
+
+/* Styling for lists */
+ul {
+    list-style: disc;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+/* Styling for all the section elements */
+section {
+    margin-bottom: 30px;
+}
+
+/* Styling for links (if any) */
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Specific Styling for Different Topics */
+#intro {
+    background-color: #e9f7fd;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#syntax {
+    background-color: #f1f8ff;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#variables {
+    background-color: #f9fdfd;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#functions {
+    background-color: #eaf7fa;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#loops {
+    background-color: #f7f9fa;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#arrays {
+    background-color: #eef9fc;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Styling for Topic-specific Content */
+#functions ul,
+#arrays ul {
+    margin-bottom: 20px;
+}
+
+#loops ul {
+    margin-bottom: 25px;
 }
 
 
