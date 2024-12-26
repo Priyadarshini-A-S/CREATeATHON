@@ -102,22 +102,262 @@
          
         <div id="variables" class="topic">
             <h2>Variables in C</h2>
-            <p>variables contents</p>
+            <section>
+                <h2>What is a Variable></h2>
+                <p>A Variable in C is a container that holds data during the executio of the program.Variables must be declared 
+                before they can be used.</p>
+                <h2>Syntax for declaring a Variable :</h2>
+                <code>
+                    <p>For Example:</p>
+                    <code>
+                        int age;/*Declares an integer variable */<br>
+                        float salary;/*Declares a floating point variable*/
+                    </code>
+                    <h2>Types of Variables</h2>
+                    <ul>
+                        <li><b>int</b> : Used for integers (for eg.:5,78,-89,etc...).</li>
+                        <li><b>float</b> : Used for floating-point numbers(for eg.:5.6,7.89,etc).</li>
+                        <li><b>char</b> : Used for single characters(for eg.:'f','G').</li>
+                        <li><b>double</b> : Used for double-precision floating-point numbers.</li>
+                    </ul>
+                    <h2>Example Pragram:</h2>
+                    <code>
+                        #include&lt;stdio.h&gt; /*Include Standard Input-Output Header*/<br>
+                        int main(){<br>
+                        int age=25; /*Integer Variable */<br>
+                        float salary=45000.00; /*Float point Variable*/
+                        char grade='A'; /*Character Variable*/
+                        <br>
+                        printf("Age : %d\\n",age);  /*To Print the Integer*/<br>
+                        printf("Salary : %.2f\\n",salary);  /*To Print the Float*/<br>
+                        printf("Grade : %c\\n",grade);  /*To Print the character*/<br>
+                        <br>
+                            return 0;  /*End of the Program*/
+                        <br>
+                        }
+                    </code>
+                    <h2>Rules for Naming Variables in C</h2>
+                    <ul>
+                        <li>Variable names must start with a letter or an underscore(_).</li>
+                        <li>Variable names cannot have spaces or any specil characters.</li>
+                        <li>Variable names are case-sensitive(for eg.:<code>age</code> and <code>Age</code> are different from each other.</li>
+                        <li>Reserved keywords (like <code>int</code>,<code>float</code>)cannot be used as variable names.</li>
+                    </ul>
+            </section>
         </div>
          
          <div id="functions" class="topic">
             <h2>Functions in C</h2>
-            <p>functions content</p>
+            <section>
+                <h2>What is a Function?</h2>
+                <p>A Function in C is a block of code designed to perform a specific task. It helps organize and reuse code efficiently.</p>
+                <h2>Syntax of a Function</h2>
+                <code>
+                    return_type function_name(parameters){<br>  
+                    //code logic<br>
+                    return value;  //Optional and depends on the return type<br>
+                    }
+                </code>
+                <h2>Types of Functions</h2>
+                <ul>
+                    <li><b>built-in Functions :</b>Functions provided by C(for eg,:<code>printf</code>,<code>scanf</code>).</li>
+                    <li><b>User-Defined Functions :</b> Functions created by the user that is the programmer to perform a specific tasks.</li>
+                </ul>
+                <h2>Example for a User-Defined Functions</h2>
+                <p>This Program calculates the sum of two numbers using a function :</p>
+                <code>
+                    #include&lt;stdio.h&gt;  /*Include standard input-output Header */<br>
+                    <br>
+                    /*Function Declaration*/<br>
+                    int addNumbers(int a,int b); <br>
+                    <br>
+                    int main(){<br>
+                    int num1=10,num2=20;<br>
+                    int sum=addNumbers(num1,num2);  /*Function call */<br>
+                    printf("Sum:%d\\n",sum);<br>
+                    return 0;<br>
+                    }<br>
+                    <br>
+                    /* Function Declaration */<br>
+                    int addNumbers(int a,int b){<br>
+                    return a+b;<br>
+                    }
+                </code>
+                <h2>Benefits of Using Functions</h2>
+                <ul>
+                    <li><b>Reusability :</b> Write a function once and can be used multiple times.</li>
+                    <li><b>Modularity :</b> Break down large programs into smaller,manageable pieces.</li>
+                    <li><b>Readaptability :</b> Makes the program easier to read and debug.</li>
+                    <li><b>Code Maintainence :</b>Easier to modify or update specific parts of the program.</li>
+                </ul>
+                <h2>Key Points</h2>
+                <ul>
+                    <li>A Function must be declared before it is called, either via a prototype or directly before the
+                    <code>main()</code> function.</li>
+                    <li>The <b>return type</b> defines the type of the value the function returns(for eg.:<code>int</code>,<code>float</code>,<code>void</code>.</li>
+                </ul>
+            </section>
         </div>
 
         <div id="loops" class="topic">
             <h2>Loops in C</h2>
-            <p>Loops contents.</p>
+             <section>
+                 <h2>What is Loop?</h2>
+                 <p>A Loop in C is used to execute a block a code repeatedly until a specified condition is met.</p>
+                 <h2>Types of Loops</h2>
+                 <ul>
+                     <li><b>for loop :</b> Executes a block of code a specified number of times.</li>
+                     <li><b>While Loop :</b> Repeats as long as a condition is true.</li>
+                     <li><b>do-while loop :</b> Executes a block of code atleast once, then continues if the continues if the condition is true.</li>
+                 </ul>
+                 <h2>1.for loop</h2>
+                 <p>the <code>for</code> loop is used when the number of iterations is known.</p>
+                 <code>
+                     for(initialazation;condition;update){<br>
+                     }
+                 </code>
+                 <p>Example :</p>
+                 <code>
+                     #include&lt;stdio.h&gt;<br>
+                     <br>
+                     int main(){<br>
+                     for(int i=1;i<=5;i++){<br>
+                         printf("%d\\n",i);<br>
+                         }<br>
+                         return 0;<br>
+                         }
+                 </code>
+                 <h2>2.While loop</h2>
+                 <p>The <code>while</code> loop is used when the condition is checked before executing the code block.</p>
+                 <code>
+                     while(condition){<br>
+                     //code to execute <br>
+                     }
+                 </code>
+                 <p>Example :</p>
+                 <code>
+                     #include&lt;stdio.h&gt;<br>
+                     <br>
+                     int main(){<br>
+                     int i=1;<br>
+                     while(i<=5){<br>
+                         printf("%d\\n",i);<br>
+                         i++;<br>
+                         }<br>
+                         return 0;<br>
+                         }
+                 </code>
+                 <h2>3.do-while loop</h2>
+                 <p>The <code>do-while</code>loop ensures the code block is executed atleast once.</p>
+                 <code>
+                     do{<br>
+                     //code to execute <br>
+                     }while(condition);
+                 </code>
+                 <p>Example :</p>
+                 <code>
+                     #include&lt;stdio.h&gt;<br>
+                     <br>
+                     int main(){<br>
+                     int i=1;<br>
+                     do{<br>
+                     printf("%d\\n",i);<br>
+                     i++;<br>
+                     }while(i<=5);<br>
+                         return 0;<br>
+                         }
+                 </code>
+                 <h2>Benefits of Loops</h2>
+                 <ul>
+                     <li><b>Efficiency :</b>Reduces code redundancy by automating repetitive tasks.</li>
+                     <li><b>Flexibility :</b> Handles Dynamic conditions during runtime.</li>
+                     <li><b>Code Readability</b>Improves the Structure of the program.</li>
+                 </ul>
+                 <h2>Key Points</h2>
+                 <ul>
+                     <li>Ensure the loop has a termination condition to avoid infinite loops.</li>
+                     <li>Use the <code>break</code> statement to exit a loop prematurely.</li>
+                     <li>Use the <code>continue</code> statement to skip the current iteration.</li>
+                 </ul>
+             </section>
         </div>
 
         <div id="arrays" class="topic">
             <h2>Arrays in C</h2>
-            <p>Arrays content</p>
+            <section>
+        <h2>What is an Array?</h2>
+        <p>
+            An array in C is a collection of variables of the same type, stored in contiguous memory locations.
+        </p>
+
+        <h2>Syntax of an Array</h2>
+        <code>
+            data_type array_name[size];
+        </code>
+        <p>Example:</p>
+        <code>
+            int numbers[5];  /* An array of 5 integers */<br>
+            float grades[10];  /* An array of 10 floating-point numbers */
+        </code>
+
+        <h2>Types of Arrays</h2>
+        <ul>
+            <li><b>One-dimensional Arrays:</b> Used to store a list of elements.</li>
+            <li><b>Multi-dimensional Arrays:</b> Used to store data in a tabular or matrix format (e.g., 2D arrays).</li>
+        </ul>
+        <h2>Example: One-dimensional Array</h2>
+        <p>This program calculates the sum of elements in an array:</p>
+        <code>
+            #include &lt;stdio.h&gt;<br>
+            <br>
+            int main() {<br>
+            int numbers[5] = {1, 2, 3, 4, 5};<br>
+            int sum = 0;<br>
+            <br>
+            for (int i = 0; i < 5; i++) {<br>
+                sum += numbers[i];<br>
+            }<br>
+            <br>
+                printf("Sum of array elements: %d\\n", sum);<br>
+            return 0;<br>
+                 }
+            </code>
+
+        <h2>Example: Two-dimensional Array</h2>
+        <p>This program prints a 2x3 matrix:</p>
+        <code>
+        #include &lt;stdio.h&gt;<br>
+        <br>
+        int main() {<br>
+        int matrix[2][3] = {<br>
+        {1, 2, 3},<br>
+        {4, 5, 6}<br>
+        };<br>
+        <br>
+        for (int i = 0; i < 2; i++) {<br>
+        for (int j = 0; j < 3; j++) {<br>
+            printf("%d ", matrix[i][j]);<br>
+        }<br>
+        printf("\\n");<br>
+        }<br>
+        return 0;<br>
+        }
+        </code>
+
+        <h2>Benefits of Arrays</h2>
+        <ul>
+            <li><b>Efficient Data Storage:</b> Allows storage of multiple elements of the same type.</li>
+            <li><b>Easy Access:</b> Elements can be accessed using an index.</li>
+            <li><b>Memory Management:</b> Stores data in contiguous memory locations.</li>
+        </ul>
+
+        <h2>Key Points</h2>
+            <ul>
+            <li>Array indices start from 0 in C.</li>
+            <li>The size of the array must be defined during declaration or initialization.</li>
+            <li>Out-of-bounds access (accessing elements outside the array size) can lead to undefined behavior.</li>
+        </ul>
+    </section>        
         </div>
     </div>
     <!-- Quiz Section -->
